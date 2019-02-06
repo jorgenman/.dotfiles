@@ -25,12 +25,10 @@ function __prompt
     local RESET="\[\033[0m\]" # Color reset
     local BOLD="\[\033[;1m\]" # Bold
 
-
     local gitdirty
     local svndirty
     local gitbranch
     local svnbranch
-    local vcs_info
 
     # Look for Git status
     if git status &>/dev/null; then
@@ -67,6 +65,10 @@ function __prompt
         PS1="${git_info}\n${svn_info}\n${debian_chroot:+($debian_chroot)}$LGREEN\h$LBLUE \w $LBLUE\$$RESET "
 
     else
+        local branch
+        local dirty
+        local vcs_info
+
         if [[ ! -z "$gitbranch" ]] ; then
             branch=$gitbranch
             dirty=$gitdirty
@@ -83,9 +85,12 @@ function __prompt
                 status_color=$YELLOW
             fi
             vcs_info="$LCYAN($BOLD$status_color$branch$LCYAN)"
+	else
+            vcs_info=
         fi
 
         PS1="${debian_chroot:+($debian_chroot)}$LGREEN\h$LBLUE \w ${vcs_info}$LBLUE\$$RESET "
+
     fi
 }
 
