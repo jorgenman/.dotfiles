@@ -1,6 +1,10 @@
 [cmake]
 disabled = true
 
+[gcloud]
+disabled = true
+format = 'on [$symbol$project]($style) '
+
 [line_break]
 disabled = true
 
