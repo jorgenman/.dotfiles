@@ -5,6 +5,7 @@
 - link:
 #    ~/.tmux.conf: tmux.conf
 #    ~/.vim: vim
+    ~/.bashrc: .bashrc
     ~/.config/fish: config/fish
     ~/.config/starship.toml: config/starship.toml
     ~/.vimrc: vimrc
