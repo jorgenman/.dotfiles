@@ -8,7 +8,8 @@
     ~/.bashrc: .bashrc
     ~/.config/fish: config/fish
     ~/.config/starship.toml: config/starship.toml
-    ~/.vimrc: vimrc
+    # I don't really use these vim plugins, and they're not working right
+    # ~/.vimrc: vimrc
 
 - create:
     - ~/.vim/undo-history
