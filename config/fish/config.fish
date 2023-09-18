@@ -8,4 +8,7 @@ fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/scripts
 
+# Requires the "foreign-env" plugin: https://github.com/oh-my-fish/plugin-foreign-env
+fenv source ~/.profile
+
 starship init fish | source

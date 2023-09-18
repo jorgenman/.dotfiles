@@ -7,7 +7,9 @@
 #    ~/.vim: vim
     ~/.bashrc: .bashrc
     ~/.config/fish: config/fish
+    ~/.config/nushell/config.nu: config/nushell/config.nu
     ~/.config/starship.toml: config/starship.toml
+    ~/.profile: .profile
     # I don't really use these vim plugins, and they're not working right
     # ~/.vimrc: vimrc
 
